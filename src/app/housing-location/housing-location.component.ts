@@ -17,6 +17,7 @@ import { RouterModule } from '@angular/router';
       <p class="listing-location">
         {{ housingLocation.city }}, {{ housingLocation.state }}
       </p>
+      <!-- 進入details頁面 -->
       <a [routerLink]="['/details', housingLocation.id]" class="listing-link"
         >learm More</a
       >
@@ -25,5 +26,6 @@ import { RouterModule } from '@angular/router';
   styleUrl: './housing-location.component.scss',
 })
 export class HousingLocationComponent {
+  // 輸入屬性
   @Input() housingLocation!: HousingLocation;
 }
